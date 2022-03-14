@@ -3,6 +3,7 @@ import styles from "../../styles/Swr.module.css";
 import Header from "../../components/Header";
 import Spinner from "../../components/hotel/Spinner";
 import HotelsList from "../../components/hotel/HotelsList";
+import AddHotelForm from "../../components/hotel/AddHotelForm";
 
 export default function IndexPage() {
   const [State, SetState] = useState({ isLoading: false, hotels: [] });
@@ -27,11 +28,14 @@ export default function IndexPage() {
       <main className={styles.main}>
         <div className={styles.content}>
           <div className="row">
+            <h4>Without SWR</h4>
             <div className="col-md-4">
               {isLoading && !hotels.length && <Spinner />}
               {!isLoading && hotels.length && <HotelsList hotels={hotels} />}
             </div>
-            <div className="col-md-2">Form</div>
+            <div className="col-md-2">
+              <AddHotelForm />
+            </div>
           </div>
         </div>
       </main>

@@ -24,6 +24,7 @@ export default function IndexPage() {
       <div className={styles.main}>
         <div className={styles.content}>
           <div className="row">
+            <h4>With SWR</h4>
             <div className="col-md-4">
               {error && <Error />}
               {!hotels?.length && <Spinner />}
