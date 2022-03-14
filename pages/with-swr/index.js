@@ -1,8 +1,10 @@
 import styles from "../../styles/Swr.module.css";
 import Header from "../../components/Header";
 import HotelsList from "../../components/hotel/HotelsList";
+import AddHotelForm from "../../components/hotel/AddHotelForm";
 import Spinner from "../../components/hotel/Spinner";
 import Error from "../../components/hotel/Error";
+import SWR_KEYS from "../../constants/SwrKeys";
 import useSWR from "swr";
 
 async function fetcher() {
@@ -11,8 +13,8 @@ async function fetcher() {
   return hotels;
 }
 
-export default function With_SWR_Page() {
-  const { data: hotels, error } = useSWR("/api/hotels", fetcher);
+export default function IndexPage() {
+  const { data: hotels, error } = useSWR(SWR_KEYS.HOTELS, fetcher);
 
   return (
     <div className={styles.container}>
@@ -27,7 +29,9 @@ export default function With_SWR_Page() {
               {!hotels?.length && <Spinner />}
               {hotels?.length && <HotelsList hotels={hotels} />}
             </div>
-            <div className="col-md-2">Form</div>
+            <div className="col-md-2">
+              <AddHotelForm />
+            </div>
           </div>
         </div>
       </div>

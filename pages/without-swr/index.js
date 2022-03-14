@@ -4,7 +4,7 @@ import Header from "../../components/Header";
 import Spinner from "../../components/hotel/Spinner";
 import HotelsList from "../../components/hotel/HotelsList";
 
-export default function Without_SWR_Page() {
+export default function IndexPage() {
   const [State, SetState] = useState({ isLoading: false, hotels: [] });
 
   useEffect(() => {
