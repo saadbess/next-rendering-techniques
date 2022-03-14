@@ -1,0 +1,39 @@
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100vw;
+  padding: 0 2rem;
+}
+
+.nav a {
+  --spacing: 1rem;
+  background-color: #000;
+  color: #fff;
+  padding: var(--spacing);
+  transition: all 0.3s;
+  width: 100%;
+  text-align: center;
+  margin-bottom: var(--spacing);
+}
+
+.nav a:hover {
+  background-color: #0070f3;
+  color: #fff;
+  transition: all 0.3s;
+}
+
+@media (min-width: 600px) {
+  .nav {
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .nav a {
+    width: 400px;
+    min-width: 400px;
+    flex-grow: 1;
+  }
+}
