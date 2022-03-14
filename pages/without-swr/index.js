@@ -28,7 +28,7 @@ export default function IndexPage() {
       <main className={styles.main}>
         <div className={styles.content}>
           <div className="row">
-            <h4>Without SWR</h4>
+            <h4>Normal fetch</h4>
             <div className="col-md-4">
               {isLoading && !hotels.length && <Spinner />}
               {!isLoading && hotels.length && <HotelsList hotels={hotels} />}

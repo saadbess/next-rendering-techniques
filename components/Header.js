@@ -11,7 +11,7 @@ export function Header() {
       <Link href="/csr">Client-side Rendering (CSR)</Link>
       <Link href="/isr">On-demand Incremental Static Generation (ISR)</Link>
       <Link href="/lorem">Lorem</Link>
-      <Link href="/without-swr/">Without SWR</Link>
+      <Link href="/without-swr/">Normal fetch</Link>
       <Link href="/with-swr/">With SWR</Link>
     </nav>
   );
