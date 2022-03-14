@@ -24,6 +24,10 @@
   transition: all 0.3s;
 }
 
+.nav a.active {
+  background-color: #0070f3;
+}
+
 @media (min-width: 600px) {
   .nav {
     flex-direction: row;

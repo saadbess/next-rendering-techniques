@@ -1,0 +1,21 @@
+.container {
+  padding: 2rem 0;
+}
+
+.pokemonList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.pokemonCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: seashell;
+  margin: 0.5rem;
+  padding: 1rem;
+}
