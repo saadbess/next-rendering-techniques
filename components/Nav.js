@@ -28,6 +28,11 @@ export function Nav() {
       </Link>
       <Link href="/isr">
         <a className={currentRoute === "/isr" ? styles.active : ""}>
+          Incremental Static Generation (ISR)
+        </a>
+      </Link>
+      <Link href="/isr-on-demand">
+        <a className={currentRoute === "/isr-on-demand" ? styles.active : ""}>
           On-demand Incremental Static Generation (ISR)
         </a>
       </Link>

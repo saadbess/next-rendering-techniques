@@ -5,7 +5,7 @@ import styles from "../styles/Ssg.module.css";
 import Image from "next/image";
 
 
-export default function ISR({ pokemons }) {
+export default function ISROnDemand({ pokemons }) {
   return (
     <div className={styles.container}>
       <Head>
@@ -36,11 +36,6 @@ export async function getStaticProps() {
       props: {
         pokemons: await res.json(),
       },
-      // Next.js will attempt to re-generate the page:
-      // - When a request comes in
-      // - At most once every 10 seconds
-      revalidate: 10, // In seconds
-  
     };
   }
   catch {
@@ -50,3 +45,4 @@ export async function getStaticProps() {
     }
   }
 }
+
