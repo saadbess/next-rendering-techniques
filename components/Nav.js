@@ -36,7 +36,7 @@ export function Nav() {
       </Link>
       <Link href="/without-swr/">
         <a className={currentRoute === "/without-swr" ? styles.active : ""}>
-          Without SWR
+          Normal fetch
         </a>
       </Link>
       <Link href="/with-swr/">
