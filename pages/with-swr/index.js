@@ -1,5 +1,6 @@
 import styles from "../../styles/Swr.module.css";
-import Header from "../../components/Header";
+// import * as Header from '../../components/Nav';
+import Nav from '../../components/Nav';
 import HotelsList from "../../components/hotel/HotelsList";
 import AddHotelForm from "../../components/hotel/AddHotelForm";
 import Spinner from "../../components/hotel/Spinner";
@@ -15,7 +16,7 @@ export default function IndexPage() {
   return (
     <div className={styles.container}>
       <header className={styles.header}>
-        <Header />
+        <Nav/>
       </header>
       <div className={styles.main}>
         <div className={styles.content}>

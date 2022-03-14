@@ -1,3 +1,8 @@
 {
-  "hotels": []
+  "hotels": [
+    {
+      "name": "Hotel A",
+      "id": 1
+    }
+  ]
 }

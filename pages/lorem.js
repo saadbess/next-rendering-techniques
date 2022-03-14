@@ -1,10 +1,10 @@
 import styles from "../styles/Swr.module.css";
-import Header from "../components/Header";
+import Nav from '../components/Nav';
 export default function LoremPage() {
   return (
     <div className={styles.container}>
       <header className={styles.header}>
-        <Header />
+        <Nav />
       </header>
       <div className={styles.main}>
         <div className={styles.content}>

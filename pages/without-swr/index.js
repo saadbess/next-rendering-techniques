@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import styles from "../../styles/Swr.module.css";
-import Header from "../../components/Header";
+import Nav from '../../components/Nav';
 import Spinner from "../../components/hotel/Spinner";
 import HotelsList from "../../components/hotel/HotelsList";
 import AddHotelForm from "../../components/hotel/AddHotelForm";
@@ -23,7 +23,7 @@ export default function IndexPage() {
   return (
     <div className={styles.container}>
       <header className={styles.header}>
-        <Header />
+        <Nav />
       </header>
       <main className={styles.main}>
         <div className={styles.content}>
