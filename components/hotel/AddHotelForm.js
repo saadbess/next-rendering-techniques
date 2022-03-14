@@ -19,9 +19,7 @@ export default function AddHotelForm() {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ name }),
     })
-      .then((response) => {
-        return response.json();
-      })
+      .then((response) => response.json())
       .then((response) => {
         if (response.id) {
           setName("");
@@ -49,7 +47,7 @@ export default function AddHotelForm() {
             setName(e.target.value);
           }}
           className="form-control"
-          placeholder="type name...."
+          placeholder="type hotel title...."
         />
       </div>
       <div className="form-group" style={{ padding: 10, textAlign: "center" }}>

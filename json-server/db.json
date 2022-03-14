@@ -5,20 +5,24 @@
       "id": 1
     },
     {
-      "name": "Second hotel",
+      "name": "Hotel A",
       "id": 2
     },
     {
-      "name": "third",
+      "name": "Hotel B",
       "id": 3
     },
     {
-      "name": "hhh",
+      "name": "LOOK",
       "id": 4
     },
     {
-      "name": "hhh",
+      "name": "KKK",
       "id": 5
+    },
+    {
+      "name": "LLL",
+      "id": 6
     }
   ]
 }
