@@ -1,32 +1,24 @@
 {
-  "employees": [
+  "hotels": [
     {
-      "name": "Ali",
+      "name": "First hotel",
       "id": 1
     },
     {
-      "name": "Salim",
+      "name": "Second hotel",
       "id": 2
     },
     {
-      "name": "Reem",
+      "name": "third",
       "id": 3
     },
     {
-      "name": "LOUI",
+      "name": "hhh",
       "id": 4
     },
     {
-      "name": "xxx",
+      "name": "hhh",
       "id": 5
-    },
-    {
-      "name": "ffff",
-      "id": 6
-    },
-    {
-      "name": "gggg",
-      "id": 7
     }
   ]
 }

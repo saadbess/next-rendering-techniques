@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "json-server --watch db.json --port 4000 --delay 1000"
+    "start": "json-server --watch db.json --port 4000 --delay 500"
   },
   "author": "",
   "license": "ISC",
