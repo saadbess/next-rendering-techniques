@@ -19,9 +19,7 @@ export default function AddHotelForm() {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ name }),
     })
-      .then((response) => {
-        return response.json();
-      })
+      .then((response) => response.json())
       .then((response) => {
         if (response.id) {
           setName("");
@@ -29,27 +27,19 @@ export default function AddHotelForm() {
           mutate(SWR_KEYS.HOTELS);
         }
       })
-      .catch((error) => {
-        console.error(error);
-      });
+      .catch((error) => console.error(error));
   }
 
   return (
-    <form
-      onSubmit={(e) => {
-        handleSubmit(e);
-      }}
-    >
+    <form onSubmit={(e) => handleSubmit(e)}>
       <div className="form-group">
         <input
           ref={inputRef}
           type={"text"}
           value={name}
-          onChange={(e) => {
-            setName(e.target.value);
-          }}
+          onChange={(e) => setName(e.target.value)}
           className="form-control"
-          placeholder="type name...."
+          placeholder="type hotel title...."
         />
       </div>
       <div className="form-group" style={{ padding: 10, textAlign: "center" }}>
