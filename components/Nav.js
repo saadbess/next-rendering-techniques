@@ -1,8 +1,8 @@
 import React from "react";
 import Link from "next/link";
-import styles from "../styles/Header.module.css";
+import styles from "../styles/Nav.module.css";
 
-export function Header() {
+export function Nav() {
   return (
     <nav className={styles.nav}>
       <Link href="/">Home</Link>
@@ -17,4 +17,4 @@ export function Header() {
   );
 }
 
-export default Header;
+export default Nav;
