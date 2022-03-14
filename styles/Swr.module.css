@@ -59,6 +59,10 @@
   font-size: 1.5rem;
 }
 
+.link {
+  text-decoration: none;
+}
+
 @media (min-width: 600px) {
   .footer {
     flex-direction: row;
