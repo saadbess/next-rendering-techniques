@@ -15,10 +15,10 @@ export default function HotelsList({ hotels }) {
 
   return (
     <ul className="list-group">
-      {hotels.map(({ id, name }) => {
+      {hotels.map(({ id, name }, index) => {
         return (
           <li key={id} className="list-group-item" style={{ fontSize: 20 }}>
-            {id} - {name}
+            {index + 1} - {name}
             <div style={{ float: "right" }}>
               <button onClick={() => deleteHotel(id)}>X</button>
             </div>

@@ -7,11 +7,7 @@ import Error from "../../components/hotel/Error";
 import SWR_KEYS from "../../constants/SwrKeys";
 import useSWR from "swr";
 
-async function fetcher() {
-  const response = await fetch("http://localhost:4000/hotels");
-  const hotels = await response.json();
-  return hotels;
-}
+const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
 export default function IndexPage() {
   const { data: hotels, error } = useSWR(SWR_KEYS.HOTELS, fetcher);
@@ -27,8 +23,8 @@ export default function IndexPage() {
             <h4>With SWR</h4>
             <div className="col-md-4">
               {error && <Error />}
-              {!hotels?.length && <Spinner />}
-              {hotels?.length && <HotelsList hotels={hotels} />}
+              {!hotels && !error && <Spinner />}
+              {hotels && <HotelsList hotels={hotels} />}
             </div>
             <div className="col-md-2">
               <AddHotelForm />

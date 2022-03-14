@@ -1,4 +1,4 @@
 const SWR_KEYS = {
-  HOTELS: "/api/hotels",
+  HOTELS: "http://localhost:4000/hotels",
 };
 export default SWR_KEYS;
