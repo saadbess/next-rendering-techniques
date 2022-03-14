@@ -27,25 +27,17 @@ export default function AddHotelForm() {
           mutate(SWR_KEYS.HOTELS);
         }
       })
-      .catch((error) => {
-        console.error(error);
-      });
+      .catch((error) => console.error(error));
   }
 
   return (
-    <form
-      onSubmit={(e) => {
-        handleSubmit(e);
-      }}
-    >
+    <form onSubmit={(e) => handleSubmit(e)}>
       <div className="form-group">
         <input
           ref={inputRef}
           type={"text"}
           value={name}
-          onChange={(e) => {
-            setName(e.target.value);
-          }}
+          onChange={(e) => setName(e.target.value)}
           className="form-control"
           placeholder="type hotel title...."
         />

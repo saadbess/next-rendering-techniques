@@ -10,9 +10,7 @@ export default function HotelsList({ hotels }) {
     })
       .then((response) => response.json())
       .then(() => mutate(SWR_KEYS.HOTELS))
-      .catch((error) => {
-        console.error(error);
-      });
+      .catch((error) => console.error(error));
   }
 
   return (
