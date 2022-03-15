@@ -24,6 +24,7 @@ export async function getStaticProps() {
   const res = await fetch("https://pokeapi.co/api/v2/pokemon?limit=50");
 
   return {
+    // will be passed to the page component as props
     props: {
       pokemon: await res.json(),
     },
