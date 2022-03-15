@@ -6,19 +6,19 @@ import HotelsList from "../../components/hotel/HotelsList";
 import AddHotelForm from "../../components/hotel/AddHotelForm";
 
 export default function IndexPage() {
-  const [State, SetState] = useState({ isLoading: false, hotels: [] });
+  const [state, setState] = useState({ isLoading: false, hotels: [] });
 
   useEffect(() => {
     async function getHotels() {
-      SetState({ ...State, isLoading: true });
+      setState({ ...state, isLoading: true });
       const response = await fetch("http://localhost:4000/hotels");
       const hotels = await response.json();
-      SetState({ isLoading: false, hotels });
+      setState({ isLoading: false, hotels });
     }
     getHotels();
   }, []);
 
-  const { isLoading, hotels } = State;
+  const { isLoading, hotels } = state;
 
   return (
     <div className={styles.container}>

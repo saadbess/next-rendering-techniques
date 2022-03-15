@@ -1,5 +1,4 @@
 import styles from "../../styles/Swr.module.css";
-// import * as Header from '../../components/Nav';
 import Nav from '../../components/Nav';
 import HotelsList from "../../components/hotel/HotelsList";
 import AddHotelForm from "../../components/hotel/AddHotelForm";
