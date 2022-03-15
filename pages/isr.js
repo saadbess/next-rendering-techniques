@@ -18,7 +18,7 @@ export default function ISR({ pokemons }) {
             <Image
               width={300}
               height={300}
-              src={pokemon?.attributes?.url}
+              src={pokemon?.attributes?.image_url}
               alt={pokemon?.attributes?.name} />
             <span>#00{index} </span>
             {pokemon?.attributes?.name}
@@ -31,7 +31,7 @@ export default function ISR({ pokemons }) {
 
 export async function getStaticProps() {
   try {
-    const res = await fetch("https://api-t3m50.strapidemo.com/api/pokemon-apis");
+    const res = await fetch("https://api-6xi5g.strapidemo.com/api/pokemon-data");
     return {
       props: {
         pokemons: await res.json(),
@@ -40,7 +40,6 @@ export async function getStaticProps() {
       // - When a request comes in
       // - At most once every 10 seconds
       revalidate: 10, // In seconds
-  
     };
   }
   catch {
